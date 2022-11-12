@@ -1,5 +1,6 @@
 import 'package:benesseteam4/model/input.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class title extends StatelessWidget {
   const title({super.key});
@@ -37,15 +38,18 @@ class AnswerTimeForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-        children: const <Widget>[
+        children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: 'Enter a total minutes for answers and explanations',
               ),
-                keyboardType: TextInputType.number
+              inputFormatters: <TextInputFormatter>[
+                  FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
+              ],
+              keyboardType: TextInputType.number
             ),
           ),
         ]
