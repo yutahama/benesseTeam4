@@ -8,15 +8,15 @@ class title extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("title"),
+        title: const Text("title"),
       ),
       body: Center(
           child: ElevatedButton(
               onPressed: () {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Input()));
+                    context, MaterialPageRoute(builder: (context) => const Input()));
               },
-              child: Text("send"))),
+              child: const Text("send"))),
     );
   }
 }
