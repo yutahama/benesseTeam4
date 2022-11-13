@@ -43,6 +43,43 @@ class Input extends StatelessWidget {
                 hintText: '選択肢4:',
               ),
             ),
+
+          
+            final isSelected = [true, false, false];
+            ToggleButtons(
+              // （2） ON/OFFの指定
+              isSelected: isSelected,
+              // （3） ボタンが押されたときの処理
+              onPressed: (index){},
+              // （4） 各ボタン表示の子ウィジェットの指定
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text('Button 1'),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text('Button 2'),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Text('Button 3'),
+                ),
+              ],
+            );
+
+
+
+
+
+
+
+
+
+
+
+
+
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(context,
@@ -61,6 +98,8 @@ class Input extends StatelessWidget {
       ),
     );
   }
+
+  
 }
 
 //以下
@@ -109,7 +148,7 @@ class _DropdownButtonMenuState extends State<DropdownButtonMenu> {
   }
 }
 
-class _DropdownButtonMenuState extends State<DropdownButtonMenu> {
+class _DropdownButtonMenuState2 extends State<DropdownButtonMenu> {
   String isSelectedValue = 'あ';
 
   @override
@@ -118,15 +157,15 @@ class _DropdownButtonMenuState extends State<DropdownButtonMenu> {
       items: const [
         DropdownMenuItem(
           value: 'あ',
-          child: Text('正しいものはどれ'),
+          child: Text('正しいものはどれか'),
         ),
         DropdownMenuItem(
-          value: 'い'
-          child: Text('誤っているものはどれ,'),
+          value: 'い',
+          child: Text('誤りはどれか'),
         ),
         DropdownMenuItem(
           value: 'う',
-          child: Text('適切な意味・単語はどれ'),
+          child: Text('適切な意味・単語はどれか'),
         ),
         DropdownMenuItem(
           value: 'え',
