@@ -22,7 +22,7 @@ class title extends StatelessWidget {
                       )
                   );
                 },
-                child: const Text("send")
+                child: const Text("Start!")
             )
         ],
       )
@@ -31,8 +31,31 @@ class title extends StatelessWidget {
   }
 }
 
-class AnswerTimeForm extends StatelessWidget {
+class AnswerTimeForm extends StatefulWidget{
   const AnswerTimeForm({super.key});
+
+  @override
+  State<AnswerTimeForm> createState() => _AnswerTimeForm();
+}
+
+class _AnswerTimeForm extends State<AnswerTimeForm> {
+
+  final myController = TextEditingController();
+
+  late int _minutes = 0;
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myController.dispose();
+    super.dispose();
+  }
+
+  void _answerTimeSubmitted(String value) {
+    setState(() {
+      _minutes = int.parse(myController.text);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,17 +64,30 @@ class AnswerTimeForm extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-            child: TextField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Enter a total minutes for answers and explanations',
-              ),
-              inputFormatters: <TextInputFormatter>[
-                  FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
+            child: Column(
+              children: <Widget>[
+                Text(_minutes.toString()),
+                TextField(
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    hintText: 'Enter a total minutes for answers and explanations',
+                  ),
+                  inputFormatters: <TextInputFormatter>[
+                      FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
+                  ],
+                  keyboardType: TextInputType.number,
+                  controller: myController,
+                  onSubmitted: _answerTimeSubmitted
+                ),
               ],
-              keyboardType: TextInputType.number
             ),
           ),
+          //ElevatedButton(
+          //    onPressed: () {
+          //      _minutes = int.parse(myController.text);
+          //    },
+          //    child: const Text("Ok")
+          //)
         ]
     );
   }
