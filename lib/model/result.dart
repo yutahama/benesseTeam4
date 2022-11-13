@@ -11,60 +11,66 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("結果発表"),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:[
+          Text("結果発表",style: TextStyle(fontSize: 24)),
+            Icon(Icons.tips_and_updates_outlined,size: 30,color: Colors.white,)
+          ]
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text(
-            '正解or不正解',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),
-          ),
           Column(children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '問1の解答　',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  '問1　',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                 ),
-                Icon(Icons.close)
+                Icon(Icons.close,color: Colors.red,size: 50)
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '問2の解答　',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
-                Icon(Icons.circle_outlined,
-                    color: Colors.red)
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  '問3の解答　',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  '問2　',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                 ),
                 Icon(Icons.circle_outlined,
-                color: Colors.red)
+                    color: Colors.red,size: 50)
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '問4の解答　',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                  '問3　',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+                ),
+                Icon(Icons.circle_outlined,
+                color: Colors.red,size: 50)
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  '問4　',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                 ),
                 Icon(Icons.close,
-                color: Colors.black,)
+                color: Colors.red,
+                  size: 50
+                )
               ],
             ),
-          ]),
+          ]
+          ),
+          Text('正解率　2/4　(50%)',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 36),),
           Center(
               child: ElevatedButton(
                   onPressed: () {
