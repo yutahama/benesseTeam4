@@ -75,7 +75,7 @@ class Break extends StatelessWidget {
               height: 50,
               padding: EdgeInsets.all(0),
               margin: EdgeInsets.all(0),
-              child: Text("Bさん:2勝",
+              child: Text("Bさん:1勝",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class Break extends StatelessWidget {
             //残り〇回戦
             Container(
               width: 220,
-              height: 60,
+              height: 70,
               decoration: BoxDecoration(
                   border: Border.all(width: 1)
               ),
@@ -102,7 +102,7 @@ class Break extends StatelessWidget {
                       //color: Color(0xff4fc3f7),
                       padding: EdgeInsets.all(10),
                       margin: EdgeInsets.all(10),
-                      child: Text("残り３回戦",
+                      child: Text("残り1回戦",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
