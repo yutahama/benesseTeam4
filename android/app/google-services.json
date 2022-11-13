@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "318934375475",
+    "project_id": "benesseteam4",
+    "storage_bucket": "benesseteam4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318934375475:android:c7e053e9d46bcfb4ce5746",
+        "android_client_info": {
+          "package_name": "com.example.benesseteam4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318934375475-6s6vkmiugn11mv1u7jeldfehlpbslpi9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC0HHiO3HVYSSSMEdm5Z0v5iZqllaMccA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318934375475-6s6vkmiugn11mv1u7jeldfehlpbslpi9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
