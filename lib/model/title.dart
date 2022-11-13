@@ -9,7 +9,8 @@ class title extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("title"),
+        centerTitle: true,
+        title: const Text("タイトル"),
       ),
       body: Column(
         children: <Widget>[
@@ -22,7 +23,7 @@ class title extends StatelessWidget {
                       )
                   );
                 },
-                child: const Text("Start!")
+                child: const Text("スタート!")
             )
         ],
       )
@@ -67,7 +68,7 @@ class _AnswerTimeForm extends State<AnswerTimeForm> {
             child: Column(
               children: <Widget>[
                 Text(
-                  "Study for $_minutes minutes",
+                  " $_minutes 分　集中して勉強しよう",
                   style: const TextStyle(
                     fontSize: 30
                   )
@@ -75,7 +76,7 @@ class _AnswerTimeForm extends State<AnswerTimeForm> {
                 TextField(
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Enter minutes for your study',
+                    hintText: '勉強する時間を入力してね！',
                   ),
                   inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
