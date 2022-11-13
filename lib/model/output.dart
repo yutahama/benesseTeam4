@@ -11,13 +11,12 @@ class Output extends StatefulWidget {
 }
 
 class _OutputState extends State<Output> {
-
   @override
   Widget build(BuildContext context) {
     String? isSelectedItem;
     return Scaffold(
       appBar: AppBar(
-        title: Text("output"),
+        title: Text("出題された問題"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,22 +25,136 @@ class _OutputState extends State<Output> {
             height: 300,
             width: double.infinity,
             color: Color(0xff4fc3f7),
-            child: Icon(Icons.question_answer, size: 50,),
+            child: Icon(Icons.question_answer, size: 50),
+          ),
+          Text(
+            '解答を選択してください',
+            style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24),
           ),
           Container(
-            width: 300,
+            width: 160,
             color: Colors.white,
             child: DropdownButton(
-              hint: Text('選択してください'),
+              hint: Text('問1の解答'),
               items: [
-                DropdownMenuItem(child: Text('あ'),value: 'あ',),
-                DropdownMenuItem(child: Text('い'),value: 'い',),
+                DropdownMenuItem(
+                  child: Text('1'),
+                  value: '1',
+                ),
+                DropdownMenuItem(
+                  child: Text('2'),
+                  value: '2',
+                ),
+                DropdownMenuItem(
+                  child: Text('3'),
+                  value: '3',
+                ),
+                DropdownMenuItem(
+                  child: Text('4'),
+                  value: '4',
+                ),
               ],
               onChanged: (String? value) {
                 setState(() {
                   isSelectedItem = value;
                 });
-              debugPrint(isSelectedItem);
+                debugPrint(isSelectedItem);
+              },
+              value: isSelectedItem,
+            ),
+          ),
+          Container(
+            width: 160,
+            color: Colors.white,
+            child: DropdownButton(
+              hint: Text('問2の解答'),
+              items: [
+                DropdownMenuItem(
+                  child: Text('1'),
+                  value: '1',
+                ),
+                DropdownMenuItem(
+                  child: Text('2'),
+                  value: '2',
+                ),
+                DropdownMenuItem(
+                  child: Text('3'),
+                  value: '3',
+                ),
+                DropdownMenuItem(
+                  child: Text('4'),
+                  value: '4',
+                ),
+              ],
+              onChanged: (String? value) {
+                setState(() {
+                  isSelectedItem = value;
+                });
+                debugPrint(isSelectedItem);
+              },
+              value: isSelectedItem,
+            ),
+          ),
+          Container(
+            width: 160,
+            color: Colors.white,
+            child: DropdownButton(
+              hint: Text('問3の解答'),
+              items: [
+                DropdownMenuItem(
+                  child: Text('1'),
+                  value: '1',
+                ),
+                DropdownMenuItem(
+                  child: Text('2'),
+                  value: '2',
+                ),
+                DropdownMenuItem(
+                  child: Text('3'),
+                  value: '3',
+                ),
+                DropdownMenuItem(
+                  child: Text('4'),
+                  value: '4',
+                ),
+              ],
+              onChanged: (String? value) {
+                setState(() {
+                  isSelectedItem = value;
+                });
+                debugPrint(isSelectedItem);
+              },
+              value: isSelectedItem,
+            ),
+          ),
+          Container(
+            width: 160,
+            color: Colors.white,
+            child: DropdownButton(
+              hint: Text('問4の解答'),
+              items: [
+                DropdownMenuItem(
+                  child: Text('1'),
+                  value: '1',
+                ),
+                DropdownMenuItem(
+                  child: Text('2'),
+                  value: '2',
+                ),
+                DropdownMenuItem(
+                  child: Text('3'),
+                  value: '3',
+                ),
+                DropdownMenuItem(
+                  child: Text('4'),
+                  value: '4',
+                ),
+              ],
+              onChanged: (String? value) {
+                setState(() {
+                  isSelectedItem = value;
+                });
+                debugPrint(isSelectedItem);
               },
               value: isSelectedItem,
             ),
@@ -49,8 +162,8 @@ class _OutputState extends State<Output> {
           Center(
               child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                        context, MaterialPageRoute(builder: (context) => Result()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Result()));
                   },
                   child: Text("結果を見る"))),
         ],
