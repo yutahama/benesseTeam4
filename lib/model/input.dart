@@ -118,15 +118,15 @@ class _DropdownButtonMenuState extends State<DropdownButtonMenu> {
       items: const [
         DropdownMenuItem(
           value: 'あ',
-          child: Text('正しいものはどれか'),
+          child: Text('正しいものはどれ'),
         ),
         DropdownMenuItem(
           value: 'い'
-          child: Text('誤っているものはどれか'),
+          child: Text('誤っているものはどれ'),
         ),
         DropdownMenuItem(
           value: 'う',
-          child: Text('適切な意味・単語はどれか'),
+          child: Text('適切な意味・単語はどれ'),
         ),
         DropdownMenuItem(
           value: 'え',
