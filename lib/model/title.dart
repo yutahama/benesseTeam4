@@ -42,7 +42,7 @@ class _AnswerTimeForm extends State<AnswerTimeForm> {
 
   final myController = TextEditingController();
 
-  late int _minutes = 0;
+  late int _minutes = 20;
 
   @override
   void dispose() {
@@ -66,11 +66,16 @@ class _AnswerTimeForm extends State<AnswerTimeForm> {
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
             child: Column(
               children: <Widget>[
-                Text(_minutes.toString()),
+                Text(
+                  "Study for $_minutes minutes",
+                  style: const TextStyle(
+                    fontSize: 30
+                  )
+                ),
                 TextField(
                   decoration: const InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText: 'Enter a total minutes for answers and explanations',
+                    hintText: 'Enter minutes for your study',
                   ),
                   inputFormatters: <TextInputFormatter>[
                       FilteringTextInputFormatter.allow(RegExp(r'[0-9]'))
