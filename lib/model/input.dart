@@ -122,7 +122,7 @@ class _DropdownButtonMenuState extends State<DropdownButtonMenu> {
         ),
         DropdownMenuItem(
           value: 'い'
-          child: Text('誤っているものはどれ'),
+          child: Text('誤っているものはどれ,'),
         ),
         DropdownMenuItem(
           value: 'う',
