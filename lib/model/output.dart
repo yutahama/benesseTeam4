@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
+import '';
 
 
   int _counter = 300;
@@ -100,13 +101,7 @@ class _OutputState extends State<Output> {
   Widget build(BuildContext context) {
     String? isSelectedItem;
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromRadius(30),
-        child: AppBar(
-          centerTitle: true,
-          title:MyTimer(limitTime: 300)
-        ),
-      ),
+      appBar: MyTimer(limitTime: 300),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
