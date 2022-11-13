@@ -10,7 +10,7 @@ class title extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("タイトル"),
+        title: const Text("Quiz with Friends"),
       ),
       body: Column(
         children: <Widget>[
