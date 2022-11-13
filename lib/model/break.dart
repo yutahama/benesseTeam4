@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
+import 'package:benesseteam4/test/myTimer.dart';
+
 class Break extends StatelessWidget {
   const Break({super.key});
 
@@ -24,7 +26,10 @@ class Break extends StatelessWidget {
     );
 
     return Scaffold(
-      appBar: AppBar(
+      appBar: MyTimer(limitTime: 600),
+
+
+        /*
         centerTitle: true,
         title: Text("4:39",
         style: TextStyle(
@@ -37,6 +42,8 @@ class Break extends StatelessWidget {
          ),
         ),
       ),
+
+      */
 
       body: Center(
         child: Column(
