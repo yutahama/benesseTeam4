@@ -14,7 +14,7 @@ class Break extends StatelessWidget {
     //戦うアイコン
     final icon1 = const Icon(
       Icons.sports_kabaddi,
-      size:20,
+      size:30,
     );
 
     //休憩アイコン
